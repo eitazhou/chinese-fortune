@@ -1,0 +1,15 @@
+fortune-mode-zh-joke
+笑话集
+
+Copyright 1999-2006 Gentoo Foundation
+Distributed under the terms of the GNU General Public License v2
+
+按照INSTALL文件进行安装。
+
+安装好后可以通过以下命令使用笑话集：
+fortune zh-joke
+
+本软件包同时提供了图形界面的工具：
+gfortune-zh-joke
+运行这个工具时，按Ok将继续显示下一条笑话，按Cancel退出。
+
