@@ -11,6 +11,7 @@ $(dats): %.dat: %
 	strfile $<
 
 install: $(scripts) $(dats)
+	install -d $(DESTDIR)/usr/bin
 	install -m 0755 $(scripts) $(DESTDIR)/usr/bin
 	ln -sf fortune-zh $(DESTDIR)/usr/bin/fortune-sc
 	ln -sf fortune-zh $(DESTDIR)/usr/bin/fortune-tc

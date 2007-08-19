@@ -20,10 +20,12 @@
 
 FORTUNE="/usr/bin/fortune"
 CMD=`basename "$0"`
+
 if [ -f $HOME/.fortune-zh.conf ]
+then
 	FILE=$(cat $HOME/.fortune-zh.conf)
 else
-	FILE="caigentan joke lunyu maozedong proverb song100 songproses tang300 tao zengguang"
+	FILE="$@"
 fi
 
 for category in LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES \
@@ -42,10 +44,10 @@ CHARSET=`echo ${LANG#*.} | tr A-Z a-z | sed -e 's/-//g'`
 if test $CMD == "fortune-zh"; then
 	case "$CHARSET" in
         big5)
-                LC_ALL=zh_CN.GB18030 $FORTUNE $DICT | autob5
+                LC_ALL=zh_CN.GB18030 $FORTUNE $FILE | autob5
                 ;;
         *)
-                $FORTUNE  $DICT
+                LC_ALL=$LANG $FORTUNE $FILE
                 ;;
         esac
 elif test $CMD == "fortune-sc"; then
@@ -54,7 +56,7 @@ elif test $CMD == "fortune-sc"; then
 		echo 'Not available in BIG5 environment, try UTF-8'
 		;;
 	*)
-		$FORTUNE $DICT
+		LC_ALL=$LANG $FORTUNE $FILE
 		;;
 	esac
 elif test $CMD == "fortune-tc"; then
@@ -63,10 +65,10 @@ elif test $CMD == "fortune-tc"; then
 		echo 'Not available in GB environment, try UTF-8'
 		;;
 	big5)
-		LC_ALL=zh_CN.GB18030 $FORTUNE $DICT | autob5 
+		LC_ALL=zh_CN.GB18030 $FORTUNE $FILE | autob5 
 		;;
 	utf8)
-		LC_ALL=zh_CN.GB18030 $FORTUNE $DICT | autob5 | autogb -i big5 -o utf8
+		LC_ALL=zh_CN.GB18030 $FORTUNE $FILE | autob5 | autogb -i big5 -o utf8
 		;;
 	esac
 fi
