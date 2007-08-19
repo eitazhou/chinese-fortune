@@ -1,13 +1,12 @@
-.PHONY: all install uninstall
+.PHONY: all install uninstall clean
+all:
+	$(MAKE) -C src
 
-SCRIPT=fortune-zh
+install:
+	$(MAKE) -C src install
 
-all:fortune-zh
+uninstall:
+	$(MAKE) -C src uninstall
 
-install: $(SCRIPT)
-	install -m 0755 $< $(DESTDIR)/usr/bin
-	ln -sf fortune-zh $(DESTDIR)/usr/bin/fortune-sc
-	ln -sf fortune-zh $(DESTDIR)/usr/bin/fortune-tc
-
-uninstall: $(SCRIPT)
-	rm -rf $(DESTDIR)/usr/bin/$(SCRIPT)
+clean:
+	$(MAKE) -C src clean
