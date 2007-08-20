@@ -9,7 +9,7 @@ Version 1.2.1 (Aug 20; Zhang Le <robert.zhangle@gmail.com>)
 	* re-write INSTALL README.utf8, and most importantly Makefile
 	* change file name from zh-* to *
 	* change maozedong to maoyulu, change tao to dao
-	* add maoshici(Thanks to miZZle on #gentoo-cn)
+	* add maoshici(Thanks to miZzle <zm3345@gmail.com> on #gentoo-cn)
 	* fortune-zh: improve locale detection algorithm
 
 Version 1.2.0 (Aug 20; Zhang Le <robert.zhangle@gmail.com>)
