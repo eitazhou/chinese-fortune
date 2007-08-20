@@ -4,7 +4,7 @@
 # $Header: $
 
 TITLE="中文fortune"
-FILE="caigentan dao joke lunyu maoshici maoyulu proverb song100 songproses tang300 zengguang"
+FILE="$@"
 
 if [ ! -z $LC_ALL ]; then
     LC_CTYPE="$LC_ALL"
@@ -21,6 +21,6 @@ esac
 
 choozen="0"
 while [ "$choozen" == "0" ]; do
-    zenity --question --title "$_TITLE" --text "`fortune $FILE | sed -e 's/\x1B\[..m//g' -e 's/\x1B\[m//g'`"
+    zenity --question --title "$_TITLE" --text "`fortune-zh $FILE | sed -e 's/\x1B\[..m//g' -e 's/\x1B\[m//g'`"
     choozen="$?"
 done

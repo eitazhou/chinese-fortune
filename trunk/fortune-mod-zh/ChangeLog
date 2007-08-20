@@ -1,3 +1,8 @@
+Version 1.2.3 (Aug 20; Zhang Le <robert.zhangle@gmail.com>)
+	* src/gfortune-zh: make it use fortune-zh instead of fortune
+	* AUTHOR: add Zhou Mi <zm3345@gmail.com>
+	* TODO: add more more files....
+
 Version 1.2.2 (Aug 20; Zhang Le <robert.zhangle@gmail.com>)
 	* src/Makefile: add install -d $(DESTDIR)/usr/bin
 	* src/fortune-zh: add a missing "then"
@@ -9,7 +14,7 @@ Version 1.2.1 (Aug 20; Zhang Le <robert.zhangle@gmail.com>)
 	* re-write INSTALL README.utf8, and most importantly Makefile
 	* change file name from zh-* to *
 	* change maozedong to maoyulu, change tao to dao
-	* add maoshici(Thanks to miZzle <zm3345@gmail.com> on #gentoo-cn)
+	* add maoshici(Thanks to Zhou Mi <zm3345@gmail.com>)
 	* fortune-zh: improve locale detection algorithm
 
 Version 1.2.0 (Aug 20; Zhang Le <robert.zhangle@gmail.com>)
