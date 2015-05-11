@@ -1,0 +1,1 @@
+Fortune is a classical UNIX program which could display an aphorism randomly. This project will create date files for fortune. It contains classcial Chinese poems and quotes from other classical Chinese literatures, like novels, fictions and so on.
